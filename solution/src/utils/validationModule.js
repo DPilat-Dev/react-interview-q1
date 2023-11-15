@@ -7,7 +7,8 @@ import { isNameValid } from "../mock-api/apis"
     Otherwise, it just calls 'isNameValid' with the 'name' and returns the value.*/
 export const isNameTaken = async (name, data) => {
 
-    const isNameInList = data.some((item) => item.name === name);
+    //Check if the name is in the list do a .trim() to remove whitespace form the front or end of name
+    const isNameInList = data.some((item) => item.name.trim() === name.trim());
 
     if(isNameInList) {
         return await isNameValid('invalid name');
