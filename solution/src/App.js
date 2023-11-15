@@ -4,6 +4,11 @@ import Form from './components/Form';
 import Table from './components/Table';
 
 function App() {
+  /* For state management, I considered using useState and passing the desired variable or 
+      method to the corresponding component because I wanted to keep this assessment as close 
+      to scratch as possible. The other options were to use React Context, Zustand, 
+      or even Redux for state management, but considering the scope of the assessment, 
+      I decided against it. */
   const [tableData, setTableData] = useState([]);
   const handleAddData = (newData) => {
     setTableData([...tableData,newData]);
